@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
 
             'name'=>'Gianluca Tiengo',
             'email'=>'gl.tiengo@gmail.com',
-            'password'=>Hash::make ('Laura1983'),
+            'password'=>Hash::make('Laura1983'),
 
         ]);
     }

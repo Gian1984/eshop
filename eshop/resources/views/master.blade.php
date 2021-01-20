@@ -56,5 +56,9 @@
             max-width:40% !important;
         }
 
+        .btn-outline-success{
+            margin-left:5px !important;
+        }
+
     </style>
 </html>
