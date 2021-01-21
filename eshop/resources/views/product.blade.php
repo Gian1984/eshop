@@ -1,6 +1,6 @@
 @extends('master')
 @section('content') 
-<div class="custom-product">
+<div class="custom-product mt-4">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         @foreach($products as $item)

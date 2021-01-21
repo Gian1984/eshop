@@ -36,6 +36,7 @@ class ProductController extends Controller
         //alert an error if such not a product find 
     } 
     
+    //add to a cart the product
     function addToCart(Request $req){
 
         if($req->session()->has('user'))
@@ -89,6 +90,7 @@ class ProductController extends Controller
         return view('ordernow', ['total'=>$total]);
     }
 
+    //adding the order to the final table to checkout
     function orderPlace(Request $req){
 
         $userId = session('user')['id'];
@@ -108,6 +110,19 @@ class ProductController extends Controller
         }
           $req->input();
           return redirect('/');
+    }
+
+    //history of client's orders
+    function myOrders(){
+
+        $userId = session('user')['id'];
+        $orders = DB::table('orders')
+        ->join('products','orders.product_id', '=','products.id')
+        ->where('orders.user_id',$userId)
+        ->get();
+
+        return view('myorders', ['orders'=>$orders]);
+
     }
     
 }

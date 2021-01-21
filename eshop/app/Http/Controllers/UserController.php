@@ -25,4 +25,16 @@ class UserController extends Controller
         
         }
     }
+
+    function register(Request $req){
+
+        $user = New User;
+        $name = implode(" ",$req->name);
+        $user->name=$name;
+        $user->email=$req->email;
+        $user->password=Hash::make($req->password);
+        $user->save();
+        return redirect('login');
+    }
+    
 }

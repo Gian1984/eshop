@@ -26,6 +26,15 @@
 
     <form class="row g-3 mt-3" action="/orderplace" method="POST">
         @csrf
+        
+        <div class="col-md-6">
+            <label for="inputAddress" class="form-label">First Name</label>
+            <input type="text" class="form-control" placeholder="First name" name="address[]" aria-label="First name">
+        </div>
+        <div class="col-md-6">
+            <label for="inputAddress" class="form-label">Last Name</label>
+            <input type="text" class="form-control" placeholder="Last name" name="address[]" aria-label="Last name">
+        </div>       
         <div class="col-12">
             <label for="inputAddress" class="form-label">Address</label>
             <input type="text" name="address[]" class="form-control" id="inputAddress" placeholder="1234 Main St" required>

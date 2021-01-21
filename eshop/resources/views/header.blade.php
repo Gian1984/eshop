@@ -7,7 +7,7 @@ use App\Http\Controllers\ProductController;
     }    
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Pc-Shop</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +19,10 @@ use App\Http\Controllers\ProductController;
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Orders</a>
+          <a class="nav-link active" href="/myorders">Orders</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/cartlist" tabindex="-1" aria-disabled="true">Cart ({{$total}})</a>
+          <a class="nav-link active" href="/cartlist" tabindex="-1" aria-disabled="true">Cart ({{$total}})</a>
         </li>
       </ul>
       <form class="d-flex" action="/search">
@@ -43,6 +43,7 @@ use App\Http\Controllers\ProductController;
       @else
       <ul class="navbar-nav">
         <li><a class="btn btn-outline-success" href="/login" role="button">Login</a><li>
+        <li><a class="btn btn-outline-success" href="/register" role="button">Register</a><li>    
       </ul>  
       @endif
     </div>
