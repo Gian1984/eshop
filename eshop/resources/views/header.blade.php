@@ -22,7 +22,7 @@ use App\Http\Controllers\ProductController;
           <a class="nav-link" href="#">Orders</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Cart ({{$total}})</a>
+          <a class="nav-link" href="/cartlist" tabindex="-1" aria-disabled="true">Cart ({{$total}})</a>
         </li>
       </ul>
       <form class="d-flex" action="/search">
