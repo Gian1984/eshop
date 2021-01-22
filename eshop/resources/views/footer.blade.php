@@ -28,13 +28,15 @@
             <h4>Newsletter</h4>
             <p>Join the our universe and subscribe to our newsletter! </p>
             <p>
-                <div class="input-group">
-                    <input type="text" class="form-control mt-2" placeholder="Search for...">
-                    <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
-                    </span>
-                </div>
-                <!-- /input-group -->
+                <form action="/newsletter" method="post">
+                    @csrf
+                    <div class="input-group">
+                        <input type="email" class="form-control mt-2" name="newsletter" placeholder="example@example.com" required>
+                    </div>
+                    <div class="input-group-btn mt-4">
+                        <button type="submit" class="btn btn-outline-light">Subscribe</button>
+                    </div>
+                </form>
             </p>
         </div>
     </div>

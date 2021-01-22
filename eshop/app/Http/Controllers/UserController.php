@@ -3,9 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
+
+
+
+
 
 class UserController extends Controller
 {
@@ -15,7 +22,8 @@ class UserController extends Controller
         
         if(!$user || ! Hash::check($req->password, $user->password))
         {
-            return "Email or password are incorrect!";
+            
+            return 'Email or password incorrect!';
            
         }
         else
@@ -36,5 +44,15 @@ class UserController extends Controller
         $user->save();
         return redirect('login');
     }
+
+    function newsLetter(Request $req){
+        
+        $newsletter = new Newsletter;
+        $newsletter->email=$req->newsletter;
+        $newsletter->save();
+        return redirect()->back();
+    }
+
+  
     
 }
