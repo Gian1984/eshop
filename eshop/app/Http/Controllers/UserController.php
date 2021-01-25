@@ -23,9 +23,7 @@ class UserController extends Controller
         if(!$user || ! Hash::check($req->password, $user->password))
         {
             
-            // return 'Email or password incorrect!';
             $req->session()->flash('error', 'Email or password incorrect!'); 
-            // dd($req->session()->get('error'));
             $message = $req->session()->get('error');
             return view('login', ['error'=> $message]);
            
@@ -56,6 +54,8 @@ class UserController extends Controller
         $newsletter->save();
         return redirect()->back();
     }
+
+    
 
   
     

@@ -42,3 +42,4 @@ Route::post("newsletter",[UserController::class, 'newsLetter']);
 
 
 
+
