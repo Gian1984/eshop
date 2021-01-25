@@ -2,7 +2,7 @@
 @section('content') 
 
 <div class="container mt-3">
-    <div class="card mb-3">
+    <div class="card m-4 mx-auto">
     <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
@@ -27,7 +27,7 @@
             <div class="input-group-btn">
                 @csrf
                 <form action="">
-                    <a href="#" class="btn btn-primary m-2">Buy now</a>
+                    <!-- <a href="#" class="btn btn-primary m-2">Buy now</a> -->
                 </form>
             </div>
         </div>

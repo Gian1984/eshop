@@ -33,8 +33,8 @@
     @foreach($products as $item)   
     <div class="col-lg-3 mt-1 mb-1">
         <div class="card h-100">           
-            <img src="{{$item['gallery']}}" class="card-img-top trend-img h-100">
-            <div class="card-body">
+            <img src="{{$item['gallery']}}" class="card-img-top trend-img" style="min-height:190px; max-height:200px;">
+            <div class="card-body align-self-end">
                 <a href="detail/{{$item['id']}}">   
                     <h5 class="card-title">{{$item['name']}}</h5>
                 </a> 

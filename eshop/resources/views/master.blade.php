@@ -11,7 +11,9 @@
 
 <body>
     {{View::make('header')}}
+    <section class="row main-image" style="min-height:500px;">
     @yield('content')
+    </section>
     {{View::make('footer')}}
 </body>
 

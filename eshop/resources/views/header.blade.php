@@ -18,16 +18,18 @@ use App\Http\Controllers\ProductController;
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
+        @if(Session::has('user'))
         <li class="nav-item">
           <a class="nav-link active" href="/myorders">Orders</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/cartlist" tabindex="-1" aria-disabled="true">Cart ({{$total}})</a>
         </li>
+        @endif
       </ul>
       <form class="d-flex" action="/search">
         <input class="form-control me-2 search-box" type="search" name="query" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
       @if(Session::has('user'))
       <ul class="navbar-nav">
@@ -42,8 +44,8 @@ use App\Http\Controllers\ProductController;
       </ul>
       @else
       <ul class="navbar-nav">
-        <li><a class="btn btn-outline-success" href="/login" role="button">Login</a><li>
-        <li><a class="btn btn-outline-success" href="/register" role="button">Register</a><li>    
+        <li><a class="btn btn-outline-light" href="/login" role="button">Login</a><li>
+        <li><a class="btn btn-outline-light" href="/register" role="button">Register</a><li>    
       </ul>  
       @endif
     </div>

@@ -1,7 +1,7 @@
 @extends('master')
 @section('content') 
 
-<h3 class="text-center mt-4 fw-lighter">Your cart :</h3>
+<h3 class="text-center mt-4 fw-lighter text-white">Your cart :</h3>
 
 <div class="row m-1 mb-4">
     @foreach($products as $item)   
@@ -23,8 +23,6 @@
     @endforeach
 </div>
 
-<div class="d-grid gap-2 mt-3 mb-5 col-6 mx-auto">
-    <a class="btn btn-primary" href="/ordernow" role="button">Order now</a>
-</div>
-
+<a class="btn btn-primary m-5 col-6 mx-auto" href="/ordernow" role="button" style="max-height:40px;">Order now</a>
+    
 @endsection

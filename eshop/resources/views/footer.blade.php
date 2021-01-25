@@ -1,8 +1,9 @@
+
 <footer class="footer-bs">
     <div class="row">
         <div class="col-md-3 footer-brand animated fadeInLeft">
             <div class="text-center mb-3">
-                <img src="" style="background-color: black;" alt="logo" class="img-thumbnail">
+                <img src="{{ asset('/img/DIVE SHOP.png') }}" style="max-height:150px;" alt="logo" class="img-thumbnail">
             </div>
             <p>©Copyright 2021 Gianluca Tiengo, All rights reserved</p>
         </div>
@@ -41,3 +42,4 @@
         </div>
     </div>
 </footer>
+

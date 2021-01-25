@@ -17,8 +17,13 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Login</button>
                 </form>
+                @if(Session::has('error'))
+                <div class="alert alert-danger alert-dismissible fade show mt-3 text-center" role="alert">
+                    <strong>Attention!</strong> Wrong email or password!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
             </div>
-           
         </div>
 </div>
 

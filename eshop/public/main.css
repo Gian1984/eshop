@@ -48,7 +48,7 @@ img.slider-img {
 
 /* style button navbar */
 
-.btn-outline-success {
+.btn-outline-light {
     margin-left: 5px !important;
 }
 
@@ -174,4 +174,11 @@ img.slider-img {
     .footer-bs .footer-ns {
         border-left: solid 1px rgba(255, 255, 255, 0.10);
     }
+}
+
+.main-image {
+    /* height: 100vh;
+    width: 100vw; */
+    background-image: url('img/pexels-adrien-olichon-3137068.jpg');
+    background-size: cover;
 }

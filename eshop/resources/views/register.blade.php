@@ -1,6 +1,6 @@
 @extends('master')
 @section('content') 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-4 offset-md-4 ">
                 <h3 class="text-center  fw-lighter">Please fill the following fields :</h3>
