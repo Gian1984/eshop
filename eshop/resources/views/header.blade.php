@@ -39,7 +39,7 @@ use App\Http\Controllers\ProductController;
           </a>
           <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/logout">Logout</a></li>
-            <li><a class="dropdown-item" href="">Contact us</a></li>
+            <li><a class="dropdown-item" href="/contact_us">Info orders</a></li>
           </ul>
         </li>
       </ul>

@@ -19,6 +19,10 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/contact_us',function() {
+    return view('contact_us');
+});
+
 Route::get('/logout', function () {
     Session::forget('user');
     return redirect('login');
@@ -37,6 +41,7 @@ Route::get("ordernow",[ProductController::class, 'orderNow']);
 Route::post("orderplace",[ProductController::class, 'orderPlace']);
 Route::get("myorders",[ProductController::class, 'myOrders']);
 Route::post("newsletter",[UserController::class, 'newsLetter']);
+Route::post("/contact_us",[UserController::class, 'infOrder']);
 
 
 

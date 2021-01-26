@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Inforder;
 use App\Models\Newsletter;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -56,7 +57,18 @@ class UserController extends Controller
     }
 
     
-
+    function infOrder(Request $req){
+        
+        $inforder = new Inforder;
+        $inforder->contact=$req->contact;
+        $inforder->inforder=$req->inforder;
+        $inforder->save();
+        $req->session()->flash('success', 'Your query will be treated soon as possible!'); 
+        $message = $req->session()->get('success');
+        return view('contact_us', ['success'=> $message]);
+        return redirect()->back();
+        
+    }
   
     
 }

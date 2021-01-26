@@ -11,7 +11,7 @@
             <div class="col-md-6">
                 <ul class="list">
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li><a href="/contact_us">Contacts</a></li>
                     <li><a href="#">Terms & Condition</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
@@ -39,6 +39,12 @@
                     </div>
                 </form>
             </p>
+            @if(Session::has('success'))
+                <div class="alert alert-success alert-dismissible fade show mt-3 text-center" role="alert">
+                    <strong>Success!</strong> Well done!!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
         </div>
     </div>
 </footer>
